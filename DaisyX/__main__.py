@@ -73,7 +73,7 @@ I am an Anime Themed Group Managing Bot and I will help in managing your group
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕ ᴛᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ɢʀᴏᴜᴘ ➕", url="t.me/KaguyaSamaRobot?startgroup=true"),
+            text="➕ ᴛᴀᴍʙᴀʜᴋᴀɴ 𝗣𝗥𝗔𝗕𝗨 ᴋᴇ ɢʀᴏᴜᴘ ➕", url="t.me/KaguyaSamaRobot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="⚔ ʙᴀɴᴛᴜᴀɴ", callback_data="aboutmanu_tac"),
