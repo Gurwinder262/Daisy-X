@@ -224,7 +224,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "Aku sudah bangun!\n<b>Belum tidur sejak:</b> <code>{}</code>".format(
+            "<b>Aing Maung🐯</b>\nAku sudah bangun!\n<b>Belum tidur sejak:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -371,7 +371,7 @@ def DaisyX_about_callback(update, context):
             f"\n✪ Saya memeriksa izin admin sebelum menjalankan perintah apa pun dan lebih banyak barang\n"
             f"\n𝗣𝗥𝗔𝗕𝗨 licensed under the GNU General Public License v3.0\n"
             f"\n✪ Pengembang saya: [sᴛᴇᴠᴀɴ](https://t.me/{OWNER_USERNAME)"
-            f"\n\nJika Anda memiliki pertanyaan tentang 𝗣𝗥𝗔𝗕𝗨, beri tahu kami\n"
+            f"\n\nJika Anda memiliki pertanyaan tentang 𝗣𝗥𝗔𝗕𝗨, beri tahu kami\n",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
