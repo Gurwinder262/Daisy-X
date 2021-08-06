@@ -72,14 +72,12 @@ I am an Anime Themed Group Managing Bot and I will help in managing your group
 
 buttons = [
     [
-        InlineKeyboardButton(text="🚀 INFO 🚀", callback_data="aboutmanu_tac"),
+        InlineKeyboardButton(
+            text="☑ Add Kaguya to your group ☑", url="t.me/KaguyaSamaRobot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="❓ Help & Commands ❓", callback_data="help_back"),
-    ],
-    [
-        InlineKeyboardButton(
-            text="☑ Add Kaguya to your group ☑", url="t.me/KaguyaSamaRobot?startgroup=true"
+        InlineKeyboardButton(text="🚀 INFO 🚀", callback_data="aboutmanu_tac"
         ),
     ],
 ]
