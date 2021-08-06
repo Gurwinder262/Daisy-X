@@ -398,7 +398,7 @@ def DaisyX_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             timeout=60,
         )
-  
+ 
     elif query.data == "aboutmanu_permis":
         query.message.edit_text(
             text=f"<b> ｢ Izin Admin 」</b>"
@@ -417,26 +417,26 @@ def DaisyX_about_callback(update, context):
         query.message.edit_text(
             text="* ｢ Pengaturan Anti-Spam 」*"
             "\n- /antispam <on/off/yes/no>: Ubah pengaturan keamanan antispam dalam grup, atau kembalikan pengaturan Anda saat ini (bila tidak ada argumen)."
-            "\n_Ini membantu melindungi Anda dan grup Anda dengan menghapus pembanjir spam secepat mungkin._"
+            "\nIni membantu melindungi Anda dan grup Anda dengan menghapus pembanjir spam secepat mungkin."
             "\n\n- /setflood <int/'no'/'off'>: mengaktifkan atau menonaktifkan pengendalian banjir"
             "\n- /setfloodmode <ban/kick/mute/tban/tmute> <value>: Tindakan yang harus dilakukan ketika pengguna telah melampaui batas banjir. ban/kick/mute/tmute/tban"
-            "\n_Antiflood allows you to take action on users that send more than x messages in a row. Exceeding the set flood will result in restricting that user._"
-            "\n\n- /addblacklist <triggers>: Add a trigger to the blacklist. Each line is considered one trigger, so using different lines will allow you to add multiple triggers."
-            "\n- /blacklistmode <off/del/warn/ban/kick/mute/tban/tmute>: Action to perform when someone sends blacklisted words."
-            "\n_Blacklists are used to stop certain triggers from being said in a group. Any time the trigger is mentioned, the message will immediately be deleted. A good combo is sometimes to pair this up with warn filters!_"
-            "\n\n- /reports <on/off>: Change report setting, or view current status."
-            "\n • If done in pm, toggles your status."
-            "\n • If in chat, toggles that chat's status."
-            "\n_If someone in your group thinks someone needs reporting, they now have an easy way to call all admins._"
-            "\n\n- /lock <type>: Lock items of a certain type (not available in private)"
-            "\n- /locktypes: Lists all possible locktypes"
-            "\n_The locks module allows you to lock away some common items in the telegram world; the bot will automatically delete them!_"
-            '\n\n- /addwarn <keyword> <reply message>: Sets a warning filter on a certain keyword. If you want your keyword to be a sentence, encompass it with quotes, as such: /addwarn "very angry" This is an angry user. '
-            "\n- /warn <userhandle>: Warns a user. After 3 warns, the user will be banned from the group. Can also be used as a reply."
-            "\n- /strongwarn <on/yes/off/no>: If set to on, exceeding the warn limit will result in a ban. Else, will just kick."
-            "\n_If you're looking for a way to automatically warn users when they say certain things, use the /addwarn command._"
-            "\n\n- /welcomemute <off/soft/strong>: All users that join, get muted"
-            "\n_ A button gets added to the welcome message for them to unmute themselves. This proves they aren't a bot! soft - restricts users ability to post media for 24 hours. strong - mutes on join until they prove they're not bots._",
+            "\nAntiflood memungkinkan Anda untuk mengambil tindakan pada pengguna yang mengirim lebih dari x pesan berturut-turut. Melebihi banjir yang ditetapkan akan mengakibatkan pembatasan pengguna itu."
+            "\n\n- /addblacklist <triggers>: Tambahkan pemicu ke daftar hitam. Setiap baris dianggap sebagai satu pemicu, jadi menggunakan baris yang berbeda akan memungkinkan Anda untuk menambahkan beberapa pemicu."
+            "\n- /blacklistmode <off/del/warn/ban/kick/mute/tban/tmute>: Tindakan yang harus dilakukan ketika seseorang mengirim kata-kata yang masuk daftar hitam."
+            "\nDaftar hitam digunakan untuk menghentikan pemicu tertentu agar tidak diucapkan dalam grup. Setiap kali pemicu disebutkan, pesan akan segera dihapus. Kombo yang bagus terkadang memasangkan ini dengan peringatan"
+            "\n\n- /reports <on/off>: Ubah setelan laporan, atau lihat status saat ini."
+            "\n • Jika dilakukan di malam hari, matikan status Anda."
+            "\n • Jika dalam obrolan, matikan status obrolan itu."
+            "\nJika seseorang di grup Anda merasa seseorang perlu melaporkan, mereka sekarang memiliki cara mudah untuk memanggil semua admin."
+            "\n\n- /lock <type>: Kunci item dari jenis tertentu (tidak tersedia secara pribadi)"
+            "\n- /locktypes: Daftar semua kemungkinan tipe kunci"
+            "\nModul kunci memungkinkan Anda untuk mengunci beberapa item umum di dunia telegram; bot akan secara otomatis menghapusnya!"
+            '\n\n- /addwarn <keyword> <reply message>: Menetapkan filter peringatan pada kata kunci tertentu. Jika Anda ingin kata kunci Anda menjadi kalimat, lampirkan dengan tanda kutip, seperti: /addwarn "sangat marah" Ini adalah pengguna yang marah. '
+            "\n- /warn <userhandle>: Memperingatkan pengguna. Setelah 3 kali peringatan, pengguna akan diblokir dari grup. Bisa juga digunakan sebagai balasan."
+            "\n- /strongwarn <on/yes/off/no>: Jika disetel ke aktif, melebihi batas peringatan akan mengakibatkan larangan. Lain, hanya akan menendang."
+            "\nJika Anda mencari cara untuk memperingatkan pengguna secara otomatis saat mereka mengatakan hal-hal tertentu, gunakan perintah /addwarn."
+            "\n\n- /welcomemute <off/soft/strong>: Semua pengguna yang bergabung, dibisukan"
+            "\n Sebuah tombol akan ditambahkan ke pesan selamat datang agar mereka dapat membunyikan sendiri. Ini membuktikan mereka bukan bot! lunak - membatasi kemampuan pengguna untuk memposting media selama 24 jam. kuat - bisu saat bergabung sampai mereka membuktikan bahwa mereka benar bukan bot.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="aboutmanu_tac")]]
@@ -460,7 +460,7 @@ def get_help(update, context):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Help",
+                                text="⚔ ʙᴀɴᴛᴜᴀɴ",
                                 url="t.me/{}?start=ghelp_{}".format(
                                     context.bot.username, module
                                 ),
@@ -476,13 +476,13 @@ def get_help(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Help",
+                            text="⚔ ʙᴀɴᴛᴜᴀɴ",
                             url="t.me/{}?start=help".format(context.bot.username),
                         )
                     ],
                     [
                         InlineKeyboardButton(
-                            text="Support Chat",
+                            text="sᴜᴘᴘᴏʀᴛ 💬",
                             url="https://t.me/{}".format(SUPPORT_CHAT),
                         )
                     ],
@@ -503,7 +503,7 @@ def get_help(update, context):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="help_back")]]
             ),
         )
 
