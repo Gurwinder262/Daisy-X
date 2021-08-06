@@ -1,5 +1,5 @@
 __help__ = """
- - /yt <text>: perform a youtube search
- - /ytaudio <link> or /ytvideo <link>: Downlods a video or audio from a youtube video to the bots local server
+ - /yt <text>: melakukan pencarian youtube
+ - /ytaudio <link> atau /yt video <link>: Mengunduh video atau audio dari video youtube ke server lokal bot
 """
 __mod_name__ = "Youtube 🎞"
