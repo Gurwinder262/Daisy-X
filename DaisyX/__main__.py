@@ -361,16 +361,16 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_tac":
         query.message.edit_text(
-            text=f"ℹ️ Saya 𝗣𝗥𝗔𝗕𝗨, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah.\n"
-            f"\n✪ Saya dapat membatasi pengguna.\n"
-            f"\n✪ Saya dapat menyapa pengguna dengan pesan selamat datang yang dapat disesuaikan dan bahkan menetapkan aturan grup.\n"
-            f"\n✪ Saya memiliki sistem anti-banjir yang canggih.\n"
-            f"\n✪ Saya dapat memperingatkan pengguna hingga mereka mencapai peringatan maksimal, dengan setiap tindakan yang telah ditentukan sebelumnya seperti larangan, bisu, tendangan, dll.\n"
-            f"\n✪ Saya memiliki sistem pencatatan, daftar hitam, dan bahkan balasan yang telah ditentukan sebelumnya pada kata kunci tertentu.\n"
-            f"\n✪ Saya memeriksa izin admin sebelum menjalankan perintah apa pun dan lebih banyak barang\n"
-            f"\n\n𝗣𝗥𝗔𝗕𝗨 licensed under the GNU General Public License v3.0\n"
-             "\n✪ Pengembang saya: [sᴛᴇᴠᴀɴ](https://t.me/GZ_056)\n"
-            f"\n\nJika Anda memiliki pertanyaan tentang 𝗣𝗥𝗔𝗕𝗨, beri tahu kami\n",
+            text="ℹ️ Saya 𝗣𝗥𝗔𝗕𝗨, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah.\n"
+            "\n✪ Saya dapat membatasi pengguna.\n"
+            "\n✪ Saya dapat menyapa pengguna dengan pesan selamat datang yang dapat disesuaikan dan bahkan menetapkan aturan grup.\n"
+            "\n✪ Saya memiliki sistem anti-banjir yang canggih.\n"
+            "\n✪ Saya dapat memperingatkan pengguna hingga mereka mencapai peringatan maksimal, dengan setiap tindakan yang telah ditentukan sebelumnya seperti larangan, bisu, tendangan, dll.\n"
+            "\n✪ Saya memiliki sistem pencatatan, daftar hitam, dan bahkan balasan yang telah ditentukan sebelumnya pada kata kunci tertentu.\n"
+            "\n✪ Saya memeriksa izin admin sebelum menjalankan perintah apa pun dan lebih banyak barang\n"
+            "\n\n𝗣𝗥𝗔𝗕𝗨 licensed under the GNU General Public License v3.0\n"
+            "\n✪ Pengembang saya: [sᴛᴇᴠᴀɴ](https://t.me/GZ_056)\n"
+            "\n\nJika Anda memiliki pertanyaan tentang 𝗣𝗥𝗔𝗕𝗨, beri tahu kami\n",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
