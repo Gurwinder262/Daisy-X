@@ -76,7 +76,7 @@ Dengan jurus super Raungan, saya bisa membasmi mereka semua dengan sangat mudah
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕ ᴛᴀᴍʙᴀʜᴋᴀɴ 𝗣𝗥𝗔𝗕𝗨 ᴋᴇ ɢʀᴏᴜᴘ ➕", url="t.me/KaguyaSamaRobot?startgroup=true"),
+            text="➕ ᴛᴀᴍʙᴀʜᴋᴀɴ 𝗣𝗥𝗔𝗕𝗨 ᴋᴇ ɢʀᴏᴜᴘ ➕", url="t.me/PrabuXRobot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="⚔ ʙᴀɴᴛᴜᴀɴ", callback_data="aboutmanu_tac"),
@@ -308,7 +308,7 @@ def help_button(update, context):
                 text=text,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="help_back")]]
                 ),
             )
 
@@ -369,17 +369,17 @@ def DaisyX_about_callback(update, context):
             f"\n✪ Saya memiliki sistem pencatatan, daftar hitam, dan bahkan balasan yang telah ditentukan sebelumnya pada kata kunci tertentu.\n"
             f"\n✪ Saya memeriksa izin admin sebelum menjalankan perintah apa pun dan lebih banyak barang\n"
             f"\n\n𝗣𝗥𝗔𝗕𝗨 licensed under the GNU General Public License v3.0\n"
-            f"\n✪ Pengembang saya:[sᴛᴇᴠᴀɴ](https://t.me/GZ_056)\n"
+            f"\n✪ Pengembang saya: [sᴛᴇᴠᴀɴ](https://t.me/GZ_056)\n"
             f"\n\nJika Anda memiliki pertanyaan tentang 𝗣𝗥𝗔𝗕𝗨, beri tahu kami\n",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="Admins Settings", callback_data="aboutmanu_permis"
+                            text="ᴀᴅᴍɪɴ sᴇᴛᴛɪɴɢs", callback_data="aboutmanu_permis"
                         ),
                         InlineKeyboardButton(
-                            text="Anti Spam", callback_data="aboutmanu_spamprot"
+                            text="ᴀɴᴛɪ sᴘᴀᴍ", callback_data="aboutmanu_spamprot"
                         ),
                     ],
                     [
@@ -387,7 +387,7 @@ def DaisyX_about_callback(update, context):
                             text="❔ ʙᴀɴᴛᴜᴀɴ & ᴘᴇʀɪɴᴛᴀʜ ❔", callback_data="help_back"
                         )
                     ],
-                    [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
+                    [InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="aboutmanu_back")],
                 ]
             ),
         )
@@ -401,25 +401,25 @@ def DaisyX_about_callback(update, context):
   
     elif query.data == "aboutmanu_permis":
         query.message.edit_text(
-            text=f"<b> ｢ Admin Permissions 」</b>"
-            f"\nTo avoid slowing down, {dispatcher.bot.first_name} caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), {dispatcher.bot.first_name} will only find out ~10 minutes later."
-            f"\n\nIF you want to update them immediately, you can use the /admincache command,thta'll force {dispatcher.bot.first_name} to check who the admins are again and their permissions"
-            f"\n\nIf you are getting a message saying:"
-            f"\n<Code>You must be this chat administrator to perform this action!</code>"
-            f"\nThis has nothing to do with {dispatcher.bot.first_name}'s rights; this is all about YOUR permissions as an admin. {dispatcher.bot.first_name} respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with {dispatcher.bot.first_name}. Similarly, to change {dispatcher.bot.first_name} settings, you need to have the Change group info permission."
-            f"\n\nThe message very clearly says that you need these rights - <i>not {dispatcher.bot.first_name}.</i>",
+            text=f"<b> ｢ Izin Admin 」</b>"
+            f"\nUntuk menghindari perlambatan, {dispatcher.bot.first_name} cache hak admin untuk setiap pengguna. Cache ini berlangsung sekitar 10 menit; ini dapat berubah di masa depan. Ini berarti jika Anda mempromosikan pengguna secara manual (tanpa menggunakan perintah /promote), {dispatcher.bot.first_name} hanya akan mengetahuinya ~ 10 menit kemudian."
+            f"\n\nJIKA Anda ingin segera memperbaruinya, Anda dapat menggunakan perintah /admincache, itu akan memaksa {dispatcher.bot.first_name} untuk memeriksa siapa adminnya lagi dan izinnya"
+            f"\n\nJika Anda mendapatkan pesan yang mengatakan:"
+            f"\n<Code>Anda harus menjadi administrator obrolan ini untuk melakukan tindakan ini!</code>"
+            f"\nIni tidak ada hubungannya dengan {dispatcher.bot.first_name} hak; ini semua tentang izin ANDA sebagai admin. {dispatcher.bot.first_name} menghormati izin admin; jika Anda tidak memiliki izin Larangan Pengguna sebagai admin telegram, Anda tidak akan dapat memblokir pengguna dengan {dispatcher.bot.first_name}. Demikian pula, untuk mengubah {dispatcher.bot.first_name} pengaturan, Anda harus memiliki izin Ubah info grup."
+            f"\n\nPesannya dengan sangat jelas mengatakan bahwa Anda membutuhkan hak-hak ini - <i>bukan {dispatcher.bot.first_name}.</i>",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_tac")]]
+                [[InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="aboutmanu_tac")]]
             ),
         )
     elif query.data == "aboutmanu_spamprot":
         query.message.edit_text(
-            text="* ｢ Anti-Spam Settings 」*"
-            "\n- /antispam <on/off/yes/no>: Change antispam security settings in the group, or return your current settings(when no arguments)."
-            "\n_This helps protect you and your groups by removing spam flooders as quickly as possible._"
-            "\n\n- /setflood <int/'no'/'off'>: enables or disables flood control"
-            "\n- /setfloodmode <ban/kick/mute/tban/tmute> <value>: Action to perform when user have exceeded flood limit. ban/kick/mute/tmute/tban"
+            text="* ｢ Pengaturan Anti-Spam 」*"
+            "\n- /antispam <on/off/yes/no>: Ubah pengaturan keamanan antispam dalam grup, atau kembalikan pengaturan Anda saat ini (bila tidak ada argumen)."
+            "\n_Ini membantu melindungi Anda dan grup Anda dengan menghapus pembanjir spam secepat mungkin._"
+            "\n\n- /setflood <int/'no'/'off'>: mengaktifkan atau menonaktifkan pengendalian banjir"
+            "\n- /setfloodmode <ban/kick/mute/tban/tmute> <value>: Tindakan yang harus dilakukan ketika pengguna telah melampaui batas banjir. ban/kick/mute/tmute/tban"
             "\n_Antiflood allows you to take action on users that send more than x messages in a row. Exceeding the set flood will result in restricting that user._"
             "\n\n- /addblacklist <triggers>: Add a trigger to the blacklist. Each line is considered one trigger, so using different lines will allow you to add multiple triggers."
             "\n- /blacklistmode <off/del/warn/ban/kick/mute/tban/tmute>: Action to perform when someone sends blacklisted words."
@@ -439,7 +439,7 @@ def DaisyX_about_callback(update, context):
             "\n_ A button gets added to the welcome message for them to unmute themselves. This proves they aren't a bot! soft - restricts users ability to post media for 24 hours. strong - mutes on join until they prove they're not bots._",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_tac")]]
+                [[InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="aboutmanu_tac")]]
             ),
         )
 
