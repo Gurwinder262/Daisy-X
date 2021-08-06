@@ -72,7 +72,7 @@ I am an Anime Themed Group Managing Bot and I will help in managing your group
 
 buttons = [
     [
-        InlineKeyboardButton(text="🚀 INFO 🚀", callback_data="aboutmanu_"),
+        InlineKeyboardButton(text="🚀 INFO 🚀", callback_data="aboutmanu_tac"),
     ],
     [
         InlineKeyboardButton(text="❓ Help & Commands ❓", callback_data="help_back"),
@@ -358,50 +358,20 @@ def help_button(update, context):
 @run_async
 def DaisyX_about_callback(update, context):
     query = update.callback_query
-    if query.data == "aboutmanu_":
+    if query.data == "aboutmanu_tac":
         query.message.edit_text(
-            text=f"* Hi again!  The name's {dispatcher.bot.first_name}  \n\n I'm a next generational group management bot developed by Magnificent Union.* "
-            f"\n\n 🔥 Join [Magnificent Union](https://t.me/MagnificentUnion) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
-            f"\n\n I have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
-            f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features [:)](https://telegra.ph/file/02cf4f4c7682fc5b5546c.jpg)"
-            f"\n\n👇 You Can Know More About Me By Clicking The Below Buttons 👇",
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(
-                            text="How To Use Me", callback_data="aboutmanu_howto"
-                        ),
-                        InlineKeyboardButton(
-                            text="T & C", callback_data="aboutmanu_tac"
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="❔Help & Commands", callback_data="help_back"
-                        )
-                    ],
-                    [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
-                ]
-            ),
-        )
-    elif query.data == "aboutmanu_back":
-        query.message.edit_text(
-            PM_START_TEXT,
-            reply_markup=InlineKeyboardMarkup(buttons),
-            parse_mode=ParseMode.MARKDOWN,
-            timeout=60,
-        )
-
-    elif query.data == "aboutmanu_howto":
-        query.message.edit_text(
-            text=f"* ｢ BASIC HELP 」*"
-            f"\nYou Can Also Add {dispatcher.bot.first_name} To Your Chats By Clicking [Here](http://t.me/{dispatcher.bot.username}?startgroup=true) And Selecting Chat. \n"
-            f"\n\nYou Can get support for {dispatcher.bot.first_name} by joining [Magnificent Union](https://t.me/MagnificentUnion).\n"
-            f"",
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
+            text=f"<b> ｢ Terms and Conditions 」</b>\n"
+            f"\n<i>To Use This Bot, You Need To Read Terms and Conditions Carefully.</i>\n"
+            f"\n✪ We always respect your privacy \n  We never log into bot's api and spying on you \n  We use a encripted database \n  Bot will automatically stops if someone logged in with api."
+            f"\n✪ Always try to keep credits, so \n  This hardwork is done by Kaguya team spending many sleepless nights.. So, Respect it."
+            f"\n✪ Some modules in this bot is owned by different authors, So, \n  All credits goes to them \n  Also for <b>Paul Larson for Marie</b>."
+            f"\n✪ If you need to ask anything about \n  this bot, Go @{SUPPORT_CHAT}."
+            f"\n✪ If you asking nonsense in Support \n  Chat, you will get warned/banned."
+            f"\n✪ All api's we used owned by originnal authors \n  Some api's we use Free version \n  Please don't overuse AI Chat."
+            f"\n✪ We don't Provide any support to forks,\n  So these terms and conditions not applied to forks \n  If you are using a fork we are not resposible for anything."
+            f"\n\nFor any kind of help, related to this bot, Join @{SUPPORT_CHAT}."
+            f"\n\n<i>Terms & Conditions will be changed anytime</i>\n",
+            parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -416,19 +386,14 @@ def DaisyX_about_callback(update, context):
                 ]
             ),
         )
-    elif query.data == "aboutmanu_credit":
+    elif query.data == "aboutmanu_back":
         query.message.edit_text(
-            text=f"*{dispatcher.bot.first_name} Is the redisigned version of Daisy and Naruto for the best performance.*"
-            f"\n\nBased on [Daisy](https://github.com/inukaasith/daisy) + [Naruto](https://github.com/imjanindu/narutorobot)."
-            f"\n\n{dispatcher.bot.first_name}'s source code was written by InukaASiTH and Imjanindu"
-            f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @{SUPPORT_CHAT}.",
+            PM_START_TEXT,
+            reply_markup=InlineKeyboardMarkup(buttons),
             parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_tac")]]
-            ),
+            timeout=60,
         )
-
+  
     elif query.data == "aboutmanu_permis":
         query.message.edit_text(
             text=f"<b> ｢ Admin Permissions 」</b>"
@@ -440,7 +405,7 @@ def DaisyX_about_callback(update, context):
             f"\n\nThe message very clearly says that you need these rights - <i>not {dispatcher.bot.first_name}.</i>",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
+                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_tac")]]
             ),
         )
     elif query.data == "aboutmanu_spamprot":
@@ -469,32 +434,7 @@ def DaisyX_about_callback(update, context):
             "\n_ A button gets added to the welcome message for them to unmute themselves. This proves they aren't a bot! soft - restricts users ability to post media for 24 hours. strong - mutes on join until they prove they're not bots._",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
-            ),
-        )
-    elif query.data == "aboutmanu_tac":
-        query.message.edit_text(
-            text=f"<b> ｢ Terms and Conditions 」</b>\n"
-            f"\n<i>To Use This Bot, You Need To Read Terms and Conditions Carefully.</i>\n"
-            f"\n✪ We always respect your privacy \n  We never log into bot's api and spying on you \n  We use a encripted database \n  Bot will automatically stops if someone logged in with api."
-            f"\n✪ Always try to keep credits, so \n  This hardwork is done by Kaguya team spending many sleepless nights.. So, Respect it."
-            f"\n✪ Some modules in this bot is owned by different authors, So, \n  All credits goes to them \n  Also for <b>Paul Larson for Marie</b>."
-            f"\n✪ If you need to ask anything about \n  this bot, Go @{SUPPORT_CHAT}."
-            f"\n✪ If you asking nonsense in Support \n  Chat, you will get warned/banned."
-            f"\n✪ All api's we used owned by originnal authors \n  Some api's we use Free version \n  Please don't overuse AI Chat."
-            f"\n✪ We don't Provide any support to forks,\n  So these terms and conditions not applied to forks \n  If you are using a fork we are not resposible for anything."
-            f"\n\nFor any kind of help, related to this bot, Join @{SUPPORT_CHAT}."
-            f"\n\n<i>Terms & Conditions will be changed anytime</i>\n",
-            parse_mode=ParseMode.HTML,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(
-                            text="Credits", callback_data="aboutmanu_credit"
-                        ),
-                        InlineKeyboardButton(text="Back", callback_data="aboutmanu_"),
-                    ]
-                ]
+                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_tac")]]
             ),
         )
 
