@@ -63,11 +63,14 @@ from DaisyX.modules.helper_funcs.misc import paginate_modules
 from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
-Hello there, I'm [Kaguya](https://telegra.ph/file/02cf4f4c7682fc5b5546c.jpg)
-
-I am an Anime Themed Group Managing Bot and I will help in managing your group
-
-✪ Make sure you read *INFO* Section Below ✪ 
+*👋🏻 Hallo, Nama saya* [𝗣𝗥𝗔𝗕𝗨](https://telegra.ph/file/d98912254d6a7d9ffbd08.jpg)
+*Dikelolah oleh* [sᴛᴇᴠᴀɴ](https://t.me/GZ_056)
+*┈───────────────────┈
+Saya adalah robot manajemen bertemakan Maung Bandung,
+Saya disini untuk membantu anda melindungi grup anda dari para pengguna telegram yang meresahkan,
+Dengan jurus super Raungan, saya bisa membasmi mereka semua dengan sangat mudah
+┈───────────────────┈
+🔻 Silahkan klik tombol bantuan untuk mendapatkan informasi*
 """
 
 buttons = [
