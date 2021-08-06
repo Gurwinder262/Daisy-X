@@ -224,7 +224,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "</b>Aku sudah bangun!\n<b>Belum tidur sejak:</b> <code>{}</code>".format(
+            "Aku sudah bangun!\n<b>Belum tidur sejak:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
