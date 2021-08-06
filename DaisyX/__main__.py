@@ -471,7 +471,7 @@ def get_help(update, context):
             )
             return
         update.effective_message.reply_text(
-            "Contact me in PM to get the list of possible commands.",
+            "Hubungi saya di PM untuk mendapatkan daftar kemungkinan perintah.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -536,7 +536,7 @@ def send_settings(chat_id, user_id, user=False):
             chat_name = dispatcher.bot.getChat(chat_id).title
             dispatcher.bot.send_message(
                 user_id,
-                text="Which module would you like to check {}'s settings for?".format(
+                text="Modul mana yang ingin Anda periksa {}pengaturan untuk?".format(
                     chat_name
                 ),
                 reply_markup=InlineKeyboardMarkup(
@@ -565,7 +565,7 @@ def settings_button(update, context):
             chat_id = mod_match.group(1)
             module = mod_match.group(2)
             chat = context.bot.get_chat(chat_id)
-            text = "*{}* has the following settings for the *{}* module:\n\n".format(
+            text = "*{}* memiliki pengaturan berikut untuk *{}* module:\n\n".format(
                 escape_markdown(chat.title), CHAT_SETTINGS[module].__mod_name__
             ) + CHAT_SETTINGS[module].__chat_settings__(chat_id, user.id)
             query.message.edit_text(
@@ -649,14 +649,14 @@ def get_settings(update: Update, context: CallbackContext):
     # ONLY send settings in PM
     if chat.type != chat.PRIVATE:
         if is_user_admin(chat, user.id):
-            text = "Click here to get this chat's settings, as well as yours."
+            text = "Klik di sini untuk mendapatkan pengaturan obrolan ini, serta pengaturan Anda."
             msg.reply_text(
                 text,
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton(
-                                text="Settings",
+                                text="Pengaturan",
                                 url="t.me/{}?start=stngs_{}".format(
                                     context.bot.username, chat.id
                                 ),
@@ -666,7 +666,7 @@ def get_settings(update: Update, context: CallbackContext):
                 ),
             )
         else:
-            text = "Click here to check your settings."
+            text = "Klik di sini untuk memeriksa pengaturan Anda."
 
     else:
         send_settings(chat.id, user.id, True)
