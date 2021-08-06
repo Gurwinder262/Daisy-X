@@ -455,7 +455,7 @@ def get_help(update, context):
         if len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
             module = args[1].lower()
             update.effective_message.reply_text(
-                f"Contact me in PM to get help of {module.capitalize()}",
+                f"Hubungi saya di PM untuk mendapatkan bantuan {module.capitalize()}",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -494,7 +494,7 @@ def get_help(update, context):
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
         text = (
-            "Here is the available help for the *{}* module:\n".format(
+            "Berikut adalah bantuan yang tersedia untuk *{}* module:\n".format(
                 HELPABLE[module].__mod_name__
             )
             + HELPABLE[module].__help__
@@ -656,7 +656,7 @@ def get_settings(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Pengaturan",
+                                text="ᴘᴇɴɢᴀᴛᴜʀᴀɴ ⚙",
                                 url="t.me/{}?start=stngs_{}".format(
                                     context.bot.username, chat.id
                                 ),
