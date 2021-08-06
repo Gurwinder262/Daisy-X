@@ -38,9 +38,6 @@ class Config(object):
     SPAMWATCH_API = ""  # go to support.spamwat.ch to get key
     SPAMWATCH_SUPPORT_CHAT = "@SpamWatchSupport"
 
-    # Heroku Credentials for updater.
-    HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
-    HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
 
     # OPTIONAL
     ##List of id's -  (not usernames) for users which have sudo access to the bot.
