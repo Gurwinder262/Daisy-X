@@ -362,7 +362,7 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_tac":
         query.message.edit_text(
-            text=f"ℹ️ Saya 𝗣𝗥𝗔𝗕𝗨, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah.\n"
+            text=f"<b>ℹ️ Saya 𝗣𝗥𝗔𝗕𝗨, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah.\n"
             f"\n✪ Saya dapat membatasi pengguna.\n"
             f"\n✪ Saya dapat menyapa pengguna dengan pesan selamat datang yang dapat disesuaikan dan bahkan menetapkan aturan grup.\n"
             f"\n✪ Saya memiliki sistem anti-banjir yang canggih.\n"
@@ -370,8 +370,8 @@ def DaisyX_about_callback(update, context):
             f"\n✪ Saya memiliki sistem pencatatan, daftar hitam, dan bahkan balasan yang telah ditentukan sebelumnya pada kata kunci tertentu.\n"
             f"\n✪ Saya memeriksa izin admin sebelum menjalankan perintah apa pun dan lebih banyak barang\n"
             f"\n𝗣𝗥𝗔𝗕𝗨 licensed under the GNU General Public License v3.0\n"
-            f"\n\n✪ Pengembang saya: [sᴛᴇᴠᴀɴ](https://t.me/{OWNER_USERNAME}),\n"
-            f"\n\nJika Anda memiliki pertanyaan tentang 𝗣𝗥𝗔𝗕𝗨, beri tahu kami\n",
+            f"\n\n✪ Pengembang saya:</b> [sᴛᴇᴠᴀɴ](https://t.me/{OWNER_USERNAME})\n"
+            f"<b>\n\nJika Anda memiliki pertanyaan tentang 𝗣𝗥𝗔𝗕𝗨, beri tahu kami\n</b>",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
