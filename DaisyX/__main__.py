@@ -199,7 +199,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="help_back")]]
                     ),
                 )
 
@@ -300,7 +300,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "*⚊❮❮❮❮ ｢  Help  for  {}  module 」❯❯❯❯⚊*\n".format(
+                "*⚊❮❮❮❮ ｢  Bantuan untuk  {}  module 」❯❯❯❯⚊*\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -370,8 +370,8 @@ def DaisyX_about_callback(update, context):
             f"\n✪ Saya memiliki sistem pencatatan, daftar hitam, dan bahkan balasan yang telah ditentukan sebelumnya pada kata kunci tertentu.\n"
             f"\n✪ Saya memeriksa izin admin sebelum menjalankan perintah apa pun dan lebih banyak barang,\n\n"
             f"\n𝗣𝗥𝗔𝗕𝗨 licensed under the GNU General Public License v3.0\n"
-            f"\n✪ Pengembang saya: [sᴛᴇᴠᴀɴ](t.me/{OWNER_USERNAME})\n\n"
-            f"\nJika Anda memiliki pertanyaan tentang 𝗣𝗥𝗔𝗕𝗨, beri tahu kami\n",
+            f"\n✪ Pengembang saya: [sᴛᴇᴠᴀɴ](https://t me/GZ_056)"
+            f"\n\nJika Anda memiliki pertanyaan tentang 𝗣𝗥𝗔𝗕𝗨, beri tahu kami\n",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -576,7 +576,7 @@ def settings_button(update, context):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Back",
+                                text="ᴋᴇᴍʙᴀʟɪ",
                                 callback_data="stngs_back({})".format(chat_id),
                             )
                         ]
