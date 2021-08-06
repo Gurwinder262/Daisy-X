@@ -369,7 +369,7 @@ def DaisyX_about_callback(update, context):
             f"\n✪ Saya memiliki sistem pencatatan, daftar hitam, dan bahkan balasan yang telah ditentukan sebelumnya pada kata kunci tertentu.\n"
             f"\n✪ Saya memeriksa izin admin sebelum menjalankan perintah apa pun dan lebih banyak barang\n"
             f"\n\n𝗣𝗥𝗔𝗕𝗨 licensed under the GNU General Public License v3.0\n"
-            f"\n✪ Pengembang saya: [sᴛᴇᴠᴀɴ](https://t.me/GZ_056) \n"
+            f"\n✪ Pengembang saya: [sᴛᴇᴠᴀɴ](https://t.me/GZ_056), \n"
             f"\n\nJika Anda memiliki pertanyaan tentang 𝗣𝗥𝗔𝗕𝗨, beri tahu kami\n",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
