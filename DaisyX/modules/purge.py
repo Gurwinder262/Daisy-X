@@ -86,14 +86,6 @@ async def delete_messages(event):
         await event.reply("Can't seem to delete this?")
         return
 
-    message = await event.get_reply_message()
-    if not message:
-        await event.reply("Whadya want to delete?")
-        return
-    chat = await event.get_input_chat()
-    del_message = [message, event.message]
-    await event.client.delete_messages(chat, del_message)
-
 
 __help__ = """
 *Admin only:*
