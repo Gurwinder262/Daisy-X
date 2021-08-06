@@ -39,6 +39,7 @@ youtube_dl
 PyYAML>=5.3.1
 redis
 html2text
+heroku3
 pythonping
 html_telegraph_poster
 pytube
