@@ -21,7 +21,7 @@ def gtts(update, context):
             reply = msg.reply_to_message.text
         else:
             return msg.reply_text(
-                "Reply to some message or enter some text to convert it into audio format!"
+                "Balas beberapa pesan atau masukkan beberapa teks untuk mengubahnya menjadi format audio!"
             )
         for x in "\n":
             reply = reply.replace(x, "")
@@ -66,7 +66,7 @@ def spellcheck(update, context):
         update.effective_message.reply_text(curr_string)
     else:
         update.effective_message.reply_text(
-            "Reply to some message to get grammar corrected text!"
+            "Balas beberapa pesan untuk mendapatkan teks yang dikoreksi tata bahasa!"
         )
 
 
