@@ -362,7 +362,7 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_tac":
         query.message.edit_text(
-            text=f"ℹ️ Saya 𝗣𝗥𝗔𝗕𝗨, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah.\n"
+            text=f" ℹ️ Saya 𝗣𝗥𝗔𝗕𝗨, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah.\n"
             f"\n✪ Saya dapat membatasi pengguna.\n"
             f"\n✪ Saya dapat menyapa pengguna dengan pesan selamat datang yang dapat disesuaikan dan bahkan menetapkan aturan grup.\n"
             f"\n✪ Saya memiliki sistem anti-banjir yang canggih.\n"
