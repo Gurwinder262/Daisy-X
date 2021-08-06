@@ -80,7 +80,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="⚔ ʙᴀɴᴛᴜᴀɴ", callback_data="aboutmanu_tac"),
-        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ 💬", url="t.me/{SUPPORT_CHAT}"
+        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/PrabuXSupport"
         ),
     ],
 ]
@@ -382,6 +382,11 @@ def DaisyX_about_callback(update, context):
                         InlineKeyboardButton(
                             text="Anti Spam", callback_data="aboutmanu_spamprot"
                         ),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="❔Help & Commands", callback_data="help_back"
+                        )
                     ],
                     [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
                 ]
