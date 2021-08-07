@@ -1,6 +1,7 @@
 future
 emoji
 lxml
+telegraph
 beautifulsoup4
 requests
 sqlalchemy==1.3.20
