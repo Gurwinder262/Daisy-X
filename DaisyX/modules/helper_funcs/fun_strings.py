@@ -84,7 +84,7 @@ DARE = (
     "Ceritakan kisah paling menyedihkan yang kamu tahu",
     "Melolong seperti serigala selama dua menit",
     "Menari tanpa musik selama dua menit",
-    "Tarian tiang wi,
+    "Tarian tiang memek",
     "Biarkan orang lain menggelitik Anda dan mencoba untuk tidak tertawa",
     "Masukkan makanan ringan ke dalam mulut Anda sekaligus sebanyak yang Anda bisa",
     "Kirim selfie terbaru Anda.",
@@ -98,7 +98,7 @@ DARE = (
     "Akui naksir Anda saat ini. ❤️",
     "Nyatakan siapa cinta sejatimu.",
     "Kirim tangkapan layar galeri Anda.",
-    "Atur foto gebetanmu sebagai 
+    "Atur foto gebetanmu sebagai wallpaper",
 )
 
 
