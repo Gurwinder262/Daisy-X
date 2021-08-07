@@ -4,6 +4,7 @@ lxml
 telegraph
 beautifulsoup4
 requests
+heroku3
 sqlalchemy==1.3.20
 python-telegram-bot==12.8
 psycopg2-binary
