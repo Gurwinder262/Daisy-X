@@ -82,7 +82,7 @@ buttons = [
         InlineKeyboardButton(text="⚔️ ʙᴀɴᴛᴜᴀɴ", callback_data="aboutmanu_"
         ),
         InlineKeyboardButton(
-            text="sᴜᴘᴘᴏʀᴛ 💬", url="t.me/GroupMusicRandom"
+            text="sᴜᴘᴘᴏʀᴛ 💬", url="t.me/PrabuXSupport"
         ),
     ],
 ]
