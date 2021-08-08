@@ -41,7 +41,6 @@ from DaisyX import (
     DONATION_LINK,
     LOGGER,
     OWNER_ID,
-    OWNER_USERNAME,
     PORT,
     SUPPORT_CHAT,
     TOKEN,
@@ -77,19 +76,21 @@ Dengan jurus super Raungan, saya bisa membasmi mereka semua dengan sangat mudah
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕ ᴛᴀᴍʙᴀʜᴋᴀɴ 𝗣𝗥𝗔𝗕𝗨 ᴋᴇ ɢʀᴏᴜᴘ ➕", url="t.me/PrabuXRobot?startgroup=true"),
+            text="💫 ᴛᴀᴍʙᴀʜᴋᴀɴ 𝗚𝗢𝗛𝗔𝗡 ᴋᴇ ɢʀᴜᴘ 💫", url="t.me/GohanRobot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="⚔ ʙᴀɴᴛᴜᴀɴ", callback_data="aboutmanu_tac"),
-        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ 💬", url="https://t.me/PrabuXSupport"
+        InlineKeyboardButton(text="⚔️ ʙᴀɴᴛᴜᴀɴ", callback_data="aboutmanu_"
+        ),
+        InlineKeyboardButton(
+            text="sᴜᴘᴘᴏʀᴛ 💬", url="t.me/GroupMusicRandom"
         ),
     ],
 ]
 
 
 HELP_STRINGS = f"""
-*Perintah Utama: 🤖
-✪ /start: Mulai saya! Anda mungkin sudah menggunakan ini.
+*Perintah Utama:* [🤖](https://telegra.ph/file/aa636d1b377c8ae81dd7e.jpg)
+*✪ /start: Mulai saya! Anda mungkin sudah menggunakan ini.
 ✪ /help: Klik ini, saya akan memberi tahu Anda tentang diri saya!
 ✪ /donate: Anda dapat mendukung pembuat saya menggunakan perintah ini.
 ✪ /settings:
@@ -97,13 +98,14 @@ HELP_STRINGS = f"""
    ◔ di Grup: akan mengarahkan Anda ke pm, dengan semua pengaturan obrolan itu.‌‌*
 """.format(
     dispatcher.bot.first_name,
-    "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
+    "" if not ALLOW_EXCL else "\nSemua perintah dapat digunakan dengan / atau !.\n",
 )
 
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
-You can donate to the original writer's of the Base code,
-Support them  [Alpha](t.me/AlphaFreakz),"""
+DONATE_STRING = """*Hai Senang Rasanya Anda Mau Berdonasi*
+*Donasi Pulsa:* 089525658633
+*Donasi E-Wallet:* [SAWERIA](https://saweria.co/GohanRobotDonate]"""
+
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -118,6 +120,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 GDPR = []
+
 
 for module_name in ALL_MODULES:
     imported_module = importlib.import_module("DaisyX.modules." + module_name)
@@ -177,7 +180,7 @@ def test(update, context):
     except:
         pass
     update.effective_message.reply_text(
-        "Hola tester! _I_ *have* `markdown`", parse_mode=ParseMode.MARKDOWN
+        "Halo penguji! Saya sudah `markdown`", parse_mode=ParseMode.MARKDOWN
     )
     update.effective_message.reply_text("This person edited a message")
     print(update.effective_message)
@@ -199,7 +202,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="Kembali", callback_data="help_back")]]
                     ),
                 )
 
@@ -232,9 +235,9 @@ def start(update: Update, context: CallbackContext):
 
 
 def error_handler(update, context):
-    """Log the error and send a telegram message to notify the developer."""
+    """Catat kesalahan dan kirim pesan telegram untuk memberi tahu pengembang."""
     # Log the error before we do anything else, so we can see it even if something breaks.
-    LOGGER.error(msg="Exception while handling an update:", exc_info=context.error)
+    LOGGER.error(msg="Pengecualian saat menangani pembaruan:", exc_info=context.error)
 
     # traceback.format_exception returns the usual python message about an exception, but as a
     # list of strings rather than a single string, so we have to join them together.
@@ -245,7 +248,7 @@ def error_handler(update, context):
 
     # Build the message with some markup and additional information about what happened.
     message = (
-        "An exception was raised while handling an update\n"
+        "Pengecualian muncul saat menangani pembaruan\n"
         "<pre>update = {}</pre>\n\n"
         "<pre>{}</pre>"
     ).format(
@@ -309,7 +312,7 @@ def help_button(update, context):
                 text=text,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="Kembali", callback_data="help_back")]]
                 ),
             )
 
@@ -354,27 +357,26 @@ def help_button(update, context):
             pass
         else:
             query.message.edit_text(excp.message)
-            LOGGER.exception("Exception in help buttons. %s", str(query.data))
+            LOGGER.exception("Pengecualian di tombol bantuan. %s", str(query.data))
 
 
 @run_async
 def DaisyX_about_callback(update, context):
     query = update.callback_query
-    if query.data == "aboutmanu_tac":
+    if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=""" 
-                  *ℹ️ Saya 𝗣𝗥𝗔𝗕𝗨, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah.
+            text=""" ℹ️ Saya 𝗚𝗢𝗛𝗔𝗠, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah.
                  \n✪ Saya dapat membatasi pengguna.
                  \n✪ Saya dapat menyapa pengguna dengan pesan selamat datang yang dapat disesuaikan dan bahkan menetapkan aturan grup.
                  \n✪ Saya memiliki sistem anti-banjir yang canggih.
                  \n✪ Saya dapat memperingatkan pengguna hingga mereka mencapai peringatan maksimal, dengan setiap tindakan yang telah ditentukan sebelumnya seperti larangan, bisu, tendangan, dll.
                  \n✪ Saya memiliki sistem pencatatan, daftar hitam, dan bahkan balasan yang telah ditentukan sebelumnya pada kata kunci tertentu.
                  \n✪ Saya memeriksa izin admin sebelum menjalankan perintah apa pun dan lebih banyak barang
-                 \n\n𝗣𝗥𝗔𝗕𝗨 licensed under the GNU General Public License v3.0
-                 \n✪ Pengembang saya:* [sᴛᴇᴠᴀɴ](tg://user?id=1521165553)
-                 \n\n*Jika Anda memiliki pertanyaan tentang 𝗣𝗥𝗔𝗕𝗨, beri tahu kami*
-                 """,
-            parse_mode=ParseMode.HTML,
+                 \n\n𝗚𝗢𝗛𝗔𝗠 licensed under the GNU General Public License v3.0
+                 \n✪ Pengembang saya: [sᴛᴇᴠᴀɴ](tg://user?id=1521165553)
+                 \n\nJika Anda memiliki pertanyaan tentang 𝗚𝗢𝗛𝗔𝗡, beri tahu kami""",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -390,7 +392,7 @@ def DaisyX_about_callback(update, context):
                             text="❔ ʙᴀɴᴛᴜᴀɴ & ᴘᴇʀɪɴᴛᴀʜ ❔", callback_data="help_back"
                         )
                     ],
-                    [InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="aboutmanu_back")],
+                    [InlineKeyboardButton(text="Kembali", callback_data="aboutmanu_back")],
                 ]
             ),
         )
@@ -401,19 +403,60 @@ def DaisyX_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             timeout=60,
         )
- 
+
+    elif query.data == "aboutmanu_howto":
+        query.message.edit_text(
+            text=""" ℹ️ Saya 𝗚𝗢𝗛𝗔𝗠, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah.
+                 \n✪ Saya dapat membatasi pengguna.
+                 \n✪ Saya dapat menyapa pengguna dengan pesan selamat datang yang dapat disesuaikan dan bahkan menetapkan aturan grup.
+                 \n✪ Saya memiliki sistem anti-banjir yang canggih.
+                 \n✪ Saya dapat memperingatkan pengguna hingga mereka mencapai peringatan maksimal, dengan setiap tindakan yang telah ditentukan sebelumnya seperti larangan, bisu, tendangan, dll.
+                 \n✪ Saya memiliki sistem pencatatan, daftar hitam, dan bahkan balasan yang telah ditentukan sebelumnya pada kata kunci tertentu.
+                 \n✪ Saya memeriksa izin admin sebelum menjalankan perintah apa pun dan lebih banyak barang
+                 \n\n𝗚𝗢𝗛𝗔𝗠 licensed under the GNU General Public License v3.0
+                 \n✪ Pengembang saya: [ɢᴏᴏᴅ ʙᴏʏs](tg://user?id=964824594)
+                 \n\nJika Anda memiliki pertanyaan tentang 𝗚𝗢𝗛𝗔𝗡, beri tahu kami""",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="Admins Settings", callback_data="aboutmanu_permis"
+                        ),
+                        InlineKeyboardButton(
+                            text="Anti Spam", callback_data="aboutmanu_spamprot"
+                        ),
+                    ],
+                    [InlineKeyboardButton(text="Kembali", callback_data="aboutmanu_")],
+                ]
+            ),
+        )
+    elif query.data == "aboutmanu_credit":
+        query.message.edit_text(
+            text=f"*{dispatcher.bot.first_name} Is the redisigned version of Daisy and Naruto for the best performance.*"
+            f"\n\nBased on [Daisy](https://github.com/inukaasith/daisy) + [Naruto](https://github.com/imjanindu/narutorobot)."
+            f"\n\n{dispatcher.bot.first_name}'s source code was written by InukaASiTH and Imjanindu"
+            f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @{SUPPORT_CHAT}.",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_tac")]]
+            ),
+        )
+
     elif query.data == "aboutmanu_permis":
         query.message.edit_text(
             text=f"<b> ｢ Izin Admin 」</b>"
             f"\nUntuk menghindari perlambatan, {dispatcher.bot.first_name} cache hak admin untuk setiap pengguna. Cache ini berlangsung sekitar 10 menit; ini dapat berubah di masa depan. Ini berarti jika Anda mempromosikan pengguna secara manual (tanpa menggunakan perintah /promote), {dispatcher.bot.first_name} hanya akan mengetahuinya ~ 10 menit kemudian."
             f"\n\nJIKA Anda ingin segera memperbaruinya, Anda dapat menggunakan perintah /admincache, itu akan memaksa {dispatcher.bot.first_name} untuk memeriksa siapa adminnya lagi dan izinnya"
             f"\n\nJika Anda mendapatkan pesan yang mengatakan:"
-            f"\n<Code>Anda harus menjadi administrator obrolan ini untuk melakukan tindakan ini!</code>"
+            f"\nAnda harus menjadi administrator obrolan ini untuk melakukan tindakan ini!"
             f"\nIni tidak ada hubungannya dengan {dispatcher.bot.first_name} hak; ini semua tentang izin ANDA sebagai admin. {dispatcher.bot.first_name} menghormati izin admin; jika Anda tidak memiliki izin Larangan Pengguna sebagai admin telegram, Anda tidak akan dapat memblokir pengguna dengan {dispatcher.bot.first_name}. Demikian pula, untuk mengubah {dispatcher.bot.first_name} pengaturan, Anda harus memiliki izin Ubah info grup."
-            f"\n\nPesannya dengan sangat jelas mengatakan bahwa Anda membutuhkan hak-hak ini - <i>bukan {dispatcher.bot.first_name}.</i>",
+            f"\n\nPesannya dengan sangat jelas mengatakan bahwa Anda membutuhkan hak-hak ini - tidak {dispatcher.bot.first_name}",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="aboutmanu_tac")]]
+                [[InlineKeyboardButton(text="Kembali", callback_data="aboutmanu_")]]
             ),
         )
     elif query.data == "aboutmanu_spamprot":
@@ -423,10 +466,10 @@ def DaisyX_about_callback(update, context):
             "\nIni membantu melindungi Anda dan grup Anda dengan menghapus pembanjir spam secepat mungkin."
             "\n\n- /setflood <int/'no'/'off'>: mengaktifkan atau menonaktifkan pengendalian banjir"
             "\n- /setfloodmode <ban/kick/mute/tban/tmute> <value>: Tindakan yang harus dilakukan ketika pengguna telah melampaui batas banjir. ban/kick/mute/tmute/tban"
-            "\nAntiflood memungkinkan Anda untuk mengambil tindakan pada pengguna yang mengirim lebih dari x pesan berturut-turut. Melebihi banjir yang ditetapkan akan mengakibatkan pembatasan pengguna itu."
+            "\nanti banjir memungkinkan Anda untuk mengambil tindakan pada pengguna yang mengirim lebih dari x pesan berturut-turut. Melebihi banjir yang ditetapkan akan mengakibatkan pembatasan pengguna itu."
             "\n\n- /addblacklist <triggers>: Tambahkan pemicu ke daftar hitam. Setiap baris dianggap sebagai satu pemicu, jadi menggunakan baris yang berbeda akan memungkinkan Anda untuk menambahkan beberapa pemicu."
             "\n- /blacklistmode <off/del/warn/ban/kick/mute/tban/tmute>: Tindakan yang harus dilakukan ketika seseorang mengirim kata-kata yang masuk daftar hitam."
-            "\nDaftar hitam digunakan untuk menghentikan pemicu tertentu agar tidak diucapkan dalam grup. Setiap kali pemicu disebutkan, pesan akan segera dihapus. Kombo yang bagus terkadang memasangkan ini dengan peringatan"
+            "\nTindakan yang dilakukan ketika seseorang mengirim kata-kata yang masuk daftar hitam. daftar hitam digunakan untuk menghentikan pemicu tertentu agar tidak diucapkan dalam grup. Setiap kali pemicu disebutkan, pesan akan segera dihapus. Kombo yang bagus terkadang memasangkan ini dengan filter peringatan!"
             "\n\n- /reports <on/off>: Ubah setelan laporan, atau lihat status saat ini."
             "\n • Jika dilakukan di malam hari, matikan status Anda."
             "\n • Jika dalam obrolan, matikan status obrolan itu."
@@ -437,12 +480,37 @@ def DaisyX_about_callback(update, context):
             '\n\n- /addwarn <keyword> <reply message>: Menetapkan filter peringatan pada kata kunci tertentu. Jika Anda ingin kata kunci Anda menjadi kalimat, lampirkan dengan tanda kutip, seperti: /addwarn "sangat marah" Ini adalah pengguna yang marah. '
             "\n- /warn <userhandle>: Memperingatkan pengguna. Setelah 3 kali peringatan, pengguna akan diblokir dari grup. Bisa juga digunakan sebagai balasan."
             "\n- /strongwarn <on/yes/off/no>: Jika disetel ke aktif, melebihi batas peringatan akan mengakibatkan larangan. Lain, hanya akan menendang."
-            "\nJika Anda mencari cara untuk memperingatkan pengguna secara otomatis saat mereka mengatakan hal-hal tertentu, gunakan perintah /addwarn."
+            "\nJika Anda mencari cara untuk memperingatkan pengguna secara otomatis ketika mereka mengatakan hal-hal tertentu, gunakan perintah /addwarn."
             "\n\n- /welcomemute <off/soft/strong>: Semua pengguna yang bergabung, dibisukan"
-            "\n Sebuah tombol akan ditambahkan ke pesan selamat datang agar mereka dapat membunyikan sendiri. Ini membuktikan mereka bukan bot! lunak - membatasi kemampuan pengguna untuk memposting media selama 24 jam. kuat - bisu saat bergabung sampai mereka membuktikan bahwa mereka benar bukan bot.",
+            "\nSebuah tombol ditambahkan ke pesan selamat datang agar mereka dapat mengaktifkan suara mereka sendiri. Ini membuktikan bahwa mereka bukan bot! lunak - membatasi kemampuan pengguna untuk memposting media selama 24 jam. kuat - mematikan suara saat bergabung sampai mereka membuktikan bahwa mereka benar bukan bot.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="aboutmanu_tac")]]
+                [[InlineKeyboardButton(text="Kembali", callback_data="aboutmanu_")]]
+            ),
+        )
+    elif query.data == "aboutmanu_tac":
+        query.message.edit_text(
+            text=f"<b> ｢ Terms and Conditions 」</b>\n"
+            f"\n<i>To Use This Bot, You Need To Read Terms and Conditions Carefully.</i>\n"
+            f"\n✪ We always respect your privacy \n  We never log into bot's api and spying on you \n  We use a encripted database \n  Bot will automatically stops if someone logged in with api."
+            f"\n✪ Always try to keep credits, so \n  This hardwork is done by Infinity_Bots team spending many sleepless nights.. So, Respect it."
+            f"\n✪ Some modules in this bot is owned by different authors, So, \n  All credits goes to them \n  Also for <b>Paul Larson for Marie</b>."
+            f"\n✪ If you need to ask anything about \n  this bot, Go @{SUPPORT_CHAT}."
+            f"\n✪ If you asking nonsense in Support \n  Chat, you will get warned/banned."
+            f"\n✪ All api's we used owned by originnal authors \n  Some api's we use Free version \n  Please don't overuse AI Chat."
+            f"\n✪ We don't Provide any support to forks,\n  So these terms and conditions not applied to forks \n  If you are using a fork of DaisyXBot we are not resposible for anything."
+            f"\n\nFor any kind of help, related to this bot, Join @{SUPPORT_CHAT}."
+            f"\n\n<i>Terms & Conditions will be changed anytime</i>\n",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="Kredit", callback_data="aboutmanu_credit"
+                        ),
+                        InlineKeyboardButton(text="Kembali", callback_data="aboutmanu_"),
+                    ]
+                ]
             ),
         )
 
@@ -463,7 +531,7 @@ def get_help(update, context):
                     [
                         [
                             InlineKeyboardButton(
-                                text="⚔ ʙᴀɴᴛᴜᴀɴ",
+                                text="Bantuan",
                                 url="t.me/{}?start=ghelp_{}".format(
                                     context.bot.username, module
                                 ),
@@ -479,13 +547,13 @@ def get_help(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="⚔ ʙᴀɴᴛᴜᴀɴ",
+                            text="Bantuan",
                             url="t.me/{}?start=help".format(context.bot.username),
                         )
                     ],
                     [
                         InlineKeyboardButton(
-                            text="sᴜᴘᴘᴏʀᴛ 💬",
+                            text="Support Chat",
                             url="https://t.me/{}".format(SUPPORT_CHAT),
                         )
                     ],
@@ -506,7 +574,7 @@ def get_help(update, context):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="Kembali", callback_data="help_back")]]
             ),
         )
 
@@ -530,7 +598,7 @@ def send_settings(chat_id, user_id, user=False):
         else:
             dispatcher.bot.send_message(
                 user_id,
-                "Seems like there aren't any user specific settings available :'(",
+                "Sepertinya tidak ada pengaturan khusus pengguna yang tersedia :'(",
                 parse_mode=ParseMode.MARKDOWN,
             )
 
@@ -539,7 +607,7 @@ def send_settings(chat_id, user_id, user=False):
             chat_name = dispatcher.bot.getChat(chat_id).title
             dispatcher.bot.send_message(
                 user_id,
-                text="Modul mana yang ingin Anda periksa {}pengaturan untuk?".format(
+                text="Modul mana yang ingin Anda periksa {}'s pengaturan untuk?".format(
                     chat_name
                 ),
                 reply_markup=InlineKeyboardMarkup(
@@ -549,8 +617,8 @@ def send_settings(chat_id, user_id, user=False):
         else:
             dispatcher.bot.send_message(
                 user_id,
-                "Seems like there aren't any chat settings available :'(\nSend this "
-                "in a group chat you're admin in to find its current settings!",
+                "Sepertinya tidak ada pengaturan obrolan yang tersedia :'(\nKirim ini "
+                "dalam obrolan grup tempat Anda menjadi admin untuk menemukan pengaturannya saat ini!",
                 parse_mode=ParseMode.MARKDOWN,
             )
 
@@ -578,7 +646,7 @@ def settings_button(update, context):
                     [
                         [
                             InlineKeyboardButton(
-                                text="ᴋᴇᴍʙᴀʟɪ",
+                                text="Kembali",
                                 callback_data="stngs_back({})".format(chat_id),
                             )
                         ]
@@ -591,8 +659,8 @@ def settings_button(update, context):
             curr_page = int(prev_match.group(2))
             chat = context.bot.get_chat(chat_id)
             query.message.edit_text(
-                "Hi there! There are quite a few settings for *{}* - go ahead and pick what "
-                "you're interested in.".format(chat.title),
+                "Halo! Ada beberapa pengaturan untuk *{}* - pergi ke depan dan memilih apa "
+                "kamu tertarik.".format(chat.title),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(
@@ -606,8 +674,8 @@ def settings_button(update, context):
             next_page = int(next_match.group(2))
             chat = context.bot.get_chat(chat_id)
             query.message.edit_text(
-                "Hi there! There are quite a few settings for *{}* - go ahead and pick what "
-                "you're interested in.".format(chat.title),
+                "Halo! Ada beberapa pengaturan untuk *{}* - pergi ke depan dan memilih apa "
+                "kamu tertarik.".format(chat.title),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(
@@ -620,8 +688,8 @@ def settings_button(update, context):
             chat_id = back_match.group(1)
             chat = context.bot.get_chat(chat_id)
             query.message.edit_text(
-                text="Hi there! There are quite a few settings for *{}* - go ahead and pick what "
-                "you're interested in.".format(escape_markdown(chat.title)),
+                text="Halo! Ada beberapa pengaturan untuk *{}* - pergi ke depan dan memilih apa "
+                "kamu tertarik.".format(escape_markdown(chat.title)),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(0, CHAT_SETTINGS, "stngs", chat=chat_id)
@@ -659,7 +727,7 @@ def get_settings(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="ᴘᴇɴɢᴀᴛᴜʀᴀɴ ⚙",
+                                text="Pengaturan",
                                 url="t.me/{}?start=stngs_{}".format(
                                     context.bot.username, chat.id
                                 ),
@@ -690,7 +758,7 @@ def migrate_chats(update, context):
     for mod in MIGRATEABLE:
         mod.__migrate__(old_chat, new_chat)
 
-    LOGGER.info("Successfully migrated!")
+    LOGGER.info("Berhasil bermigrasi!")
     raise DispatcherHandlerStop
 
 
@@ -699,7 +767,7 @@ def is_chat_allowed(update, context):
         chat_id = update.effective_message.chat_id
         if chat_id not in WHITELIST_CHATS:
             context.bot.send_message(
-                chat_id=update.message.chat_id, text="Unallowed chat! Leaving..."
+                chat_id=update.message.chat_id, text="Obrolan yang tidak diizinkan! Meninggalkan..."
             )
             try:
                 context.bot.leave_chat(chat_id)
@@ -709,7 +777,7 @@ def is_chat_allowed(update, context):
         chat_id = update.effective_message.chat_id
         if chat_id in BL_CHATS:
             context.bot.send_message(
-                chat_id=update.message.chat_id, text="Unallowed chat! Leaving..."
+                chat_id=update.message.chat_id, text="Obrolan yang tidak diizinkan! Meninggalkan..."
             )
             try:
                 context.bot.leave_chat(chat_id)
@@ -719,7 +787,7 @@ def is_chat_allowed(update, context):
         chat_id = update.effective_message.chat_id
         if chat_id in BL_CHATS:
             context.bot.send_message(
-                chat_id=update.message.chat_id, text="Unallowed chat, leaving"
+                chat_id=update.message.chat_id, text="Obrolan yang tidak diizinkan, pergi"
             )
             try:
                 context.bot.leave_chat(chat_id)
@@ -739,8 +807,8 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
         update.effective_message.reply_text(
-            "You can also donate to the person currently running me "
-            "[here]({})".format(DONATION_LINK),
+            "Anda juga dapat menyumbang kepada orang yang saat ini menjalankan saya "
+            "[sini]({})".format(DONATION_LINK),
             parse_mode=ParseMode.MARKDOWN,
         )
 
@@ -752,10 +820,10 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "𝗣𝗥𝗔𝗕𝗨 Sudah aktif!")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "𝗚𝗢𝗛𝗔𝗡 sudah aktif!")
         except Unauthorized:
             LOGGER.warning(
-                "Bot isnt able to send message to support_chat, go and check!"
+                "Bot tidak dapat mengirim pesan untuk support_chat, buka dan periksa!"
             )
         except BadRequest as e:
             LOGGER.warning(e.message)
