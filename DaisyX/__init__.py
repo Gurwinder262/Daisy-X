@@ -167,14 +167,6 @@ else:
     SPAMWATCH_API = Config.SPAMWATCH_API
     YOUTUBE_API_KEY = Config.YOUTUBE_API_KEY
     INFOPIC = Config.INFOPIC
-    loop = asyncio.get_event_loop()
-    SUPPORT_CHAT = get_str_key("SUPPORT_CHAT", required=True)
-    log.debug("Getting bot info...")
-    bot_info = loop.run_until_complete(bot.get_me())
-    BOT_USERNAME = bot_info.username
-    BOT_ID = bot_info.id
-    POSTGRESS_URL = get_str_key("DATABASE_URL", required=True)
-    TEMP_DOWNLOAD_DIRECTORY = "./"
 
     try:
         BL_CHATS = set(int(x) for x in Config.BL_CHATS or [])
@@ -190,7 +182,6 @@ if not SPAMWATCH_API:
 else:
     sw = spamwatch.Client(SPAMWATCH_API)
 
-
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("saitama", API_ID, API_HASH)
 pbot = Client("DaisyX", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
@@ -202,6 +193,23 @@ DEV_USERS = list(DEV_USERS)
 WOLVES = list(WOLVES)
 DEMONS = list(DEMONS)
 TIGERS = list(TIGERS)
+
+# AIOGram
+bot = Bot(token=TOKEN, parse_mode=types.ParseMode.HTML, server=server)
+storage = RedisStorage2(
+    host=get_str_key("REDIS_URI"),
+    port=get_int_key("REDIS_PORT"),
+    password=get_str_key("REDIS_PASS"),
+)
+dp = Dispatcher(bot, storage=storage)
+
+loop = asyncio.get_event_loop()
+log.debug("Getting bot info...")
+bot_info = loop.run_until_complete(bot.get_me())
+BOT_USERNAME = bot_info.username
+BOT_ID = bot_info.id
+POSTGRESS_URL = get_str_key("DATABASE_URL", required=True)
+TEMP_DOWNLOAD_DIRECTORY = "./"
 
 # Load at end to ensure all prev variables have been set
 from DaisyX.modules.helper_funcs.handlers import (
