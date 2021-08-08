@@ -162,6 +162,8 @@ else:
     TIME_API_KEY = Config.TIME_API_KEY
     AI_API_KEY = Config.AI_API_KEY
     WALL_API = Config.WALL_API
+    BOT_USERNAME = bot_info.username
+    BOT_ID = bot_info.id
     SUPPORT_CHAT = Config.SUPPORT_CHAT
     SPAMWATCH_SUPPORT_CHAT = Config.SPAMWATCH_SUPPORT_CHAT
     SPAMWATCH_API = Config.SPAMWATCH_API
