@@ -76,7 +76,7 @@ Dengan jurus super Raungan, saya bisa membasmi mereka semua dengan sangat mudah
 buttons = [
     [
         InlineKeyboardButton(
-            text="💫 ᴛᴀᴍʙᴀʜᴋᴀɴ 𝗚𝗢𝗛𝗔𝗡 ᴋᴇ ɢʀᴜᴘ 💫", url="t.me/GohanRobot?startgroup=true"),
+            text="💫 ᴛᴀᴍʙᴀʜᴋᴀɴ 𝗣𝗥𝗔𝗕𝗨 ᴋᴇ ɢʀᴜᴘ 💫", url="t.me/GohanRobot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="⚔️ ʙᴀɴᴛᴜᴀɴ", callback_data="aboutmanu_"
@@ -365,16 +365,16 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=""" ℹ️ Saya 𝗚𝗢𝗛𝗔𝗠, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah.
+            text=""" ℹ️ Saya 𝗣𝗥𝗔𝗕𝗨, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah.
                  \n✪ Saya dapat membatasi pengguna.
                  \n✪ Saya dapat menyapa pengguna dengan pesan selamat datang yang dapat disesuaikan dan bahkan menetapkan aturan grup.
                  \n✪ Saya memiliki sistem anti-banjir yang canggih.
                  \n✪ Saya dapat memperingatkan pengguna hingga mereka mencapai peringatan maksimal, dengan setiap tindakan yang telah ditentukan sebelumnya seperti larangan, bisu, tendangan, dll.
                  \n✪ Saya memiliki sistem pencatatan, daftar hitam, dan bahkan balasan yang telah ditentukan sebelumnya pada kata kunci tertentu.
                  \n✪ Saya memeriksa izin admin sebelum menjalankan perintah apa pun dan lebih banyak barang
-                 \n\n𝗚𝗢𝗛𝗔𝗠 licensed under the GNU General Public License v3.0
+                 \n\n𝗣𝗥𝗔𝗕𝗨 licensed under the GNU General Public License v3.0
                  \n✪ Pengembang saya: [sᴛᴇᴠᴀɴ](tg://user?id=1521165553)
-                 \n\nJika Anda memiliki pertanyaan tentang 𝗚𝗢𝗛𝗔𝗡, beri tahu kami""",
+                 \n\nJika Anda memiliki pertanyaan tentang 𝗣𝗥𝗔𝗕𝗨, beri tahu kami""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -406,16 +406,16 @@ def DaisyX_about_callback(update, context):
 
     elif query.data == "aboutmanu_howto":
         query.message.edit_text(
-            text=""" ℹ️ Saya 𝗚𝗢𝗛𝗔𝗠, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah.
+            text=""" ℹ️ Saya 𝗣𝗥𝗔𝗕𝗨, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah.
                  \n✪ Saya dapat membatasi pengguna.
                  \n✪ Saya dapat menyapa pengguna dengan pesan selamat datang yang dapat disesuaikan dan bahkan menetapkan aturan grup.
                  \n✪ Saya memiliki sistem anti-banjir yang canggih.
                  \n✪ Saya dapat memperingatkan pengguna hingga mereka mencapai peringatan maksimal, dengan setiap tindakan yang telah ditentukan sebelumnya seperti larangan, bisu, tendangan, dll.
                  \n✪ Saya memiliki sistem pencatatan, daftar hitam, dan bahkan balasan yang telah ditentukan sebelumnya pada kata kunci tertentu.
                  \n✪ Saya memeriksa izin admin sebelum menjalankan perintah apa pun dan lebih banyak barang
-                 \n\n𝗚𝗢𝗛𝗔𝗠 licensed under the GNU General Public License v3.0
-                 \n✪ Pengembang saya: [ɢᴏᴏᴅ ʙᴏʏs](tg://user?id=964824594)
-                 \n\nJika Anda memiliki pertanyaan tentang 𝗚𝗢𝗛𝗔𝗡, beri tahu kami""",
+                 \n\n𝗣𝗥𝗔𝗕𝗨 licensed under the GNU General Public License v3.0
+                 \n✪ Pengembang saya: [sᴛᴇᴠᴀɴ](tg://user?id=1521165553)
+                 \n\nJika Anda memiliki pertanyaan tentang 𝗣𝗥𝗔𝗕𝗨, beri tahu kami""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -820,7 +820,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "𝗚𝗢𝗛𝗔𝗡 sudah aktif!")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "𝗣𝗥𝗔𝗕𝗨 sudah aktif!")
         except Unauthorized:
             LOGGER.warning(
                 "Bot tidak dapat mengirim pesan untuk support_chat, buka dan periksa!"
