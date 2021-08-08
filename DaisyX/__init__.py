@@ -201,15 +201,6 @@ storage = RedisStorage2(
     port=get_int_key("REDIS_PORT"),
     password=get_str_key("REDIS_PASS"),
 )
-dp = Dispatcher(bot, storage=storage)
-
-loop = asyncio.get_event_loop()
-log.debug("Getting bot info...")
-bot_info = loop.run_until_complete(bot.get_me())
-BOT_USERNAME = bot_info.username
-BOT_ID = bot_info.id
-POSTGRESS_URL = get_str_key("DATABASE_URL", required=True)
-TEMP_DOWNLOAD_DIRECTORY = "./"
 
 # Load at end to ensure all prev variables have been set
 from DaisyX.modules.helper_funcs.handlers import (
