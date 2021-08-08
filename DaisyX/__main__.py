@@ -365,7 +365,7 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=""" ℹ️ Saya 𝗣𝗥𝗔𝗕𝗨, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah.
+            text=""" [ℹ️](https://telegra.ph/file/0ba3d33fa76b33add2ac2.jpg) Saya 𝗣𝗥𝗔𝗕𝗨, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah.
                  \n✪ Saya dapat membatasi pengguna.
                  \n✪ Saya dapat menyapa pengguna dengan pesan selamat datang yang dapat disesuaikan dan bahkan menetapkan aturan grup.
                  \n✪ Saya memiliki sistem anti-banjir yang canggih.
@@ -406,7 +406,7 @@ def DaisyX_about_callback(update, context):
 
     elif query.data == "aboutmanu_howto":
         query.message.edit_text(
-            text=""" ℹ️ Saya 𝗣𝗥𝗔𝗕𝗨, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah.
+            text=""" [ℹ️](https://telegra.ph/file/0ba3d33fa76b33add2ac2.jpg) Saya 𝗣𝗥𝗔𝗕𝗨, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah.
                  \n✪ Saya dapat membatasi pengguna.
                  \n✪ Saya dapat menyapa pengguna dengan pesan selamat datang yang dapat disesuaikan dan bahkan menetapkan aturan grup.
                  \n✪ Saya memiliki sistem anti-banjir yang canggih.
