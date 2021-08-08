@@ -89,7 +89,7 @@ buttons = [
 
 
 HELP_STRINGS = f"""
-*Perintah Utama:* [🤖](https://telegra.ph/file/aa636d1b377c8ae81dd7e.jpg)
+*Perintah Utama:* [🤖](https://telegra.ph/file/9b59e879018641b53ec5a.jpg)
 *✪ /start: Mulai saya! Anda mungkin sudah menggunakan ini.
 ✪ /help: Klik ini, saya akan memberi tahu Anda tentang diri saya!
 ✪ /donate: Anda dapat mendukung pembuat saya menggunakan perintah ini.
