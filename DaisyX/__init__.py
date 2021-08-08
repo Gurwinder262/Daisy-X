@@ -193,7 +193,6 @@ DEV_USERS = list(DEV_USERS)
 WOLVES = list(WOLVES)
 DEMONS = list(DEMONS)
 TIGERS = list(TIGERS)
-)
 
 # Load at end to ensure all prev variables have been set
 from DaisyX.modules.helper_funcs.handlers import (
