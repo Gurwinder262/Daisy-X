@@ -63,7 +63,7 @@ from DaisyX.modules.helper_funcs.misc import paginate_modules
 from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
-*👋🏻 Hallo, Nama saya* [𝗣𝗥𝗔𝗕𝗨](https://telegra.ph/file/d98912254d6a7d9ffbd08.jpg)
+*👋🏻 Hallo, Nama saya* [𝗣𝗥𝗔𝗕𝗨](https://telegra.ph/file/0ba3d33fa76b33add2ac2.jpg)
 *Dikelolah oleh* [sᴛᴇᴠᴀɴ](tg://user?id=1521165553)
 *┈───────────────────┈
 Saya adalah robot manajemen bertemakan Maung Bandung,
@@ -76,7 +76,7 @@ Dengan jurus super Raungan, saya bisa membasmi mereka semua dengan sangat mudah
 buttons = [
     [
         InlineKeyboardButton(
-            text="💫 ᴛᴀᴍʙᴀʜᴋᴀɴ 𝗣𝗥𝗔𝗕𝗨 ᴋᴇ ɢʀᴜᴘ 💫", url="t.me/GohanRobot?startgroup=true"),
+            text="💫 ᴛᴀᴍʙᴀʜᴋᴀɴ 𝗣𝗥𝗔𝗕𝗨 ᴋᴇ ɢʀᴜᴘ 💫", url="t.me/PrabuXRobot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="⚔️ ʙᴀɴᴛᴜᴀɴ", callback_data="aboutmanu_"
@@ -365,7 +365,7 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=""" [ℹ️](https://telegra.ph/file/0ba3d33fa76b33add2ac2.jpg) Saya 𝗣𝗥𝗔𝗕𝗨, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah.
+            text=""" ℹ️ Saya 𝗣𝗥𝗔𝗕𝗨, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah.
                  \n✪ Saya dapat membatasi pengguna.
                  \n✪ Saya dapat menyapa pengguna dengan pesan selamat datang yang dapat disesuaikan dan bahkan menetapkan aturan grup.
                  \n✪ Saya memiliki sistem anti-banjir yang canggih.
@@ -406,7 +406,7 @@ def DaisyX_about_callback(update, context):
 
     elif query.data == "aboutmanu_howto":
         query.message.edit_text(
-            text=""" [ℹ️](https://telegra.ph/file/0ba3d33fa76b33add2ac2.jpg) Saya 𝗣𝗥𝗔𝗕𝗨, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah.
+            text=""" ℹ️ Saya 𝗣𝗥𝗔𝗕𝗨, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah.
                  \n✪ Saya dapat membatasi pengguna.
                  \n✪ Saya dapat menyapa pengguna dengan pesan selamat datang yang dapat disesuaikan dan bahkan menetapkan aturan grup.
                  \n✪ Saya memiliki sistem anti-banjir yang canggih.
