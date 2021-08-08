@@ -84,8 +84,6 @@ if ENV:
     AI_API_KEY = os.environ.get("AI_API_KEY", None)
     WALL_API = os.environ.get("WALL_API", None)
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None)
-    BOT_USERNAME = os.eviron.get("BOT_USERNAME", None)
-    BOT_ID = os.eviron.get("BOT_ID", None)
     YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
     SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", None)
     SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None)
@@ -169,6 +167,14 @@ else:
     SPAMWATCH_API = Config.SPAMWATCH_API
     YOUTUBE_API_KEY = Config.YOUTUBE_API_KEY
     INFOPIC = Config.INFOPIC
+    loop = asyncio.get_event_loop()
+    SUPPORT_CHAT = get_str_key("SUPPORT_CHAT", required=True)
+    log.debug("Getting bot info...")
+    bot_info = loop.run_until_complete(bot.get_me())
+    BOT_USERNAME = bot_info.username
+    BOT_ID = bot_info.id
+    POSTGRESS_URL = get_str_key("DATABASE_URL", required=True)
+    TEMP_DOWNLOAD_DIRECTORY = "./"
 
     try:
         BL_CHATS = set(int(x) for x in Config.BL_CHATS or [])
