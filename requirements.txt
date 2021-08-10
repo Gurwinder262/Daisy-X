@@ -18,9 +18,9 @@ psutil
 aiohttp>=2.2.5
 Pillow>=4.2.0
 CurrencyConverter
-googletrans==3.1.0a0
+googletrans==4.0.0-rc1
 jikanpy
-speedtest-cli
+speedtest-client
 coffeehouse
 regex
 bleach
@@ -41,7 +41,6 @@ youtube_dl
 PyYAML>=5.3.1
 redis
 html2text
-heroku3
 pythonping
 html_telegraph_poster
 pytube
