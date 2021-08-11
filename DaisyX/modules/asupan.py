@@ -10,7 +10,7 @@ async def asupan(event):
         asupannya = f"{resp['url']}"
         return await tbot.send_file(event.chat_id, asupannya)
     except Exception:
-        await event.reply("`Something went wrong LOL...`")
+        await event.reply("`Tunggu bentar NYETT...`")
 
 
 @register(pattern="^/wibu ?(.*)")
@@ -20,4 +20,4 @@ async def wibu(event):
         wibunya = f"{resp['url']}"
         return await tbot.send_file(event.chat_id, wibunya)
     except Exception:
-        await event.reply("`Something went wrong LOL...`")
+        await event.reply("`Tunggu bentar NYETT...`")
