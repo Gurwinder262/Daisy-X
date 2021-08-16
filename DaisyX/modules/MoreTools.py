@@ -1,28 +1,28 @@
 __help__ = """
 ** GPS **
- - /gps <Place> : Show Location on a map
+ - /gps <Place> : Tampilkan Lokasi di peta
  
  ** Blue Cleaner **
- - /cleanblue on : Turn bluetext cleaner on
- - /cleanblue off : Turn bluetext cleaner off
+ - /cleanblue on : Aktifkan pembersih teks biru
+ - /cleanblue off : Matikan pembersih teks biru
  
  ** Send **
- - /snd <Text> : Message like the bot
+ - /snd <Text> : Pesan seperti bot
  
 ** Grammer **
- - /t <reply> : Show grammer corrected text
+ - /t <reply> : Tampilkan teks yang dikoreksi tata bahasa
  
 ** Image Tools**
- - /img <text>: perform a image search
- - /getqr <reply to image>: Read QR code
- - /makeqr <reply to text>: Make QR code
+ - /img <text>: melakukan pencarian gambar
+ - /getqr <reply to image>: Baca kode QR
+ - /makeqr <reply to text>: Buat kode QR
  
 ** Style Text **
- - /weebify : Weebify Text
- - /square : square Text
- - /blue : Blues text
+ - /weebify : Teks Weebify
+ - /square : Teks persegi
+ - /blue : Teks biru
  
 ** More **
- - /phone <tp no> : Track Phone no
+ - /phone <tp no> : Lacak No. Telepon
 """
 __mod_name__ = "More Tools 🧩"

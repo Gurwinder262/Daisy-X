@@ -190,24 +190,24 @@ def config(client, message):
 __help__ = """
 *ForceSubscribe:*
 
-*Channel Manageer Inbuilt*
-✪ I can stop texting members of your group until they subscribe to one or more channels.
-✪ If members are not connected to your channel I can mute them and ask them to join the channel and I can mute them at the push of a button.
+*Pengelola Saluran Terpasang*
+Saya dapat berhenti mengirim SMS ke anggota grup Anda sampai mereka berlangganan ke satu atau lebih saluran.
+Jika anggota tidak terhubung ke saluran Anda Saya dapat membisukan mereka
  
 
-*Setup*
-1) First of all add me in the group as admin with ban users permission and in the channel as admin.
-Note: Only creator of the group can setup me and i will not allow force subscribe again if not done so.
+*Mempersiapkan*
+1) Pertama-tama tambahkan saya di grup sebagai admin dengan izin larangan pengguna dan di saluran sebagai admin.
+Catatan: Hanya pembuat grup yang dapat mengatur saya dan saya tidak akan mengizinkan paksa berlangganan lagi jika tidak melakukannya.
  
 *Commmands*
-✪ /ForceSubscribe - To get the current settings.
-✪ /ForceSubscribe no/off/disable - To turn of ForceSubscribe.
-✪ /ForceSubscribe {channel username} - To turn on and setup the channel.
-✪ /ForceSubscribe clear - To unmute all members who muted by me.
+✪ /ForceSubscribe - Untuk mendapatkan pengaturan saat ini.
+✪ /ForceSubscribe no/off/disable - Untuk mengaktifkan ForceSubscribe.
+✪ /ForceSubscribe {channel username} - Untuk mengaktifkan dan mengatur saluran.
+✪ /ForceSubscribe clear - Untuk membunyikan semua anggota yang dibisukan oleh saya.
 
-Note: /FSub is an alias of /ForceSubscribe
+Note: /FSub adalah alias dari /ForceSubscribe
 
-💭 Only on Kaguya yet
+💭 Hanya di Prabu
  
 """
 __mod_name__ = "Force Sub 📢"

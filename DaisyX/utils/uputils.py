@@ -58,10 +58,10 @@ def time_formatter(milliseconds: int) -> str:
     hours, minutes = divmod(minutes, 60)
     days, hours = divmod(hours, 24)
     tmp = (
-        ((str(days) + "d, ") if days else "")
-        + ((str(hours) + "h, ") if hours else "")
-        + ((str(minutes) + "m, ") if minutes else "")
-        + ((str(seconds) + "s, ") if seconds else "")
+        ((str(days) + "days, ") if days else "")
+        + ((str(hours) + "hours, ") if hours else "")
+        + ((str(minutes) + "mins, ") if minutes else "")
+        + ((str(seconds) + "secs, ") if seconds else "")
         + ((str(milliseconds) + "ms, ") if milliseconds else "")
     )
     return tmp[:-2]
